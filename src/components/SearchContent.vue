@@ -1,7 +1,8 @@
 <template>
-  <div class="container m-auto">
+  <div class="container m-auto relative">
     <section class="w-6/12 m-auto px-4 sm:px-6 lg:px-4 xl:px-6 pt-4 pb-4 sm:pb-6 lg:pb-4 xl:pb-6 space-y-4">
-      <header class="flex items-center justify-between">
+      <header class="header flex items-center">
+        <img src="/images/github.png" alt="Github" class="w-6 h-6 mr-2">
         <h2 class="text-lg leading-6 font-medium text-black">GitHub</h2>
       </header>
       <form class="relative">
@@ -12,11 +13,15 @@
       </form>
       <slot></slot>
     </section>
+    <button @click="jump('.header')" class="fixed bottom-10 right-10 border-2 border-black rounded-full p-2">
+      <img src="/images/arrow.png" alt="" class="w-6 h-6 transform -rotate-90">
+    </button>
   </div>
 </template>
 <script>
 import {mapActions, mapState} from 'vuex';
 import debounce from 'lodash/debounce';
+import jump from 'jump.js';
 
 export default {
   name: 'Search',
@@ -35,7 +40,13 @@ export default {
     ...mapActions(['setSearchQuery', 'search']),
     debouncedSearch: debounce(function () {
       this.search();
-    }, 500)
+    }, 500),
+    jump(val) {
+      jump(val, {
+        duration: 1000,
+        offset: 0
+      })
+    }
   }
 }
 </script>
