@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
 import axios from 'axios';
 
 const SET_SEARCH_QUERY = 'SET_SEARCH_QUERY';

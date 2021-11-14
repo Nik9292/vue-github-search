@@ -1,20 +1,16 @@
 <template>
   <div id="app">
-    <search>
-      <user></user>
-    </search>
+    <search-content></search-content>
   </div>
 </template>
 
 <script>
-  import Search from './components/SearchContent.vue'
-  import User from './components/User.vue'
+  import SearchContent from './components/SearchContent.vue';
 
 export default {
   name: 'App',
   components: {
-    Search,
-    User
+    SearchContent,
   },
 }
 </script>

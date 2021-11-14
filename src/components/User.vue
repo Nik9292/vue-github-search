@@ -12,12 +12,12 @@
             </div>
             <div class="pl-4 text-left flex flex-col">
               <div>
-                <a :href="`${user.owner.html_url}`" target="_blank">
-                  <h1 class="text-lg font-semibold text-black mb-1 hover:text-blue-900" >{{user.owner.name || user.owner.login}}</h1>
-                </a>
-                <a :href="`${user.owner.html_url}`" target="_blank">
-                  <h2 class="text-base font-medium text-black mb-1 hover:text-blue-900">{{user.name}}</h2>
-                </a>
+                <h1 class="text-lg font-semibold text-black mb-1 hover:text-blue-900" >
+                  <a :href="`${user.owner.html_url}`" target="_blank">{{user.owner.name || user.owner.login}}</a>
+                </h1>
+                <h2 class="text-base font-medium text-black mb-1 hover:text-blue-900">
+                  <a :href="`${user.owner.html_url}`" target="_blank">{{user.name}}</a>
+                </h2>
               </div>
               <p class="text-sm text-black mb-2" >{{ user.description || 'Описание отсутствует'}}</p>
               <div class="flex">
