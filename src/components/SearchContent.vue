@@ -1,6 +1,6 @@
 <template>
   <div class="container m-auto relative">
-    <section class="w-6/12 m-auto px-4 sm:px-6 lg:px-4 xl:px-6 pt-4 pb-4 sm:pb-6 lg:pb-4 xl:pb-6 space-y-4">
+    <section class="lg:w-6/12 md:w-full m-auto px-4 sm:px-6 lg:px-4 xl:px-6 pt-4 pb-4 sm:pb-6 lg:pb-4 xl:pb-6 space-y-4">
       <header class="header flex items-center">
         <img src="/images/github.png" alt="Github" class="w-6 h-6 mr-2">
         <h2 class="text-lg leading-6 font-medium text-black">GitHub</h2>
@@ -13,7 +13,7 @@
       </form>
       <user></user>
     </section>
-    <button @click="jump('.header')" class="fixed bottom-10 right-10 border-2 border-black rounded-full p-2">
+    <button @click="jump('.header')" class="fixed bottom-10 right-10 border-2 border-black bg-white rounded-full p-2">
       <img src="/images/arrow.png" alt="" class="w-6 h-6 transform -rotate-90">
     </button>
   </div>
